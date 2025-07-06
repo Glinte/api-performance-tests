@@ -10,7 +10,7 @@ pandas = "*"
 docker = "*"
 pyyaml = "^6.0.1"
 httpx = "*"
-uvloop = "*"
+uvloop = {version = "*", platform = "!=win32"}
 anyio = "*"
 jinja2 = "^3.1.2"
 uvicorn = "^0.23.1"
