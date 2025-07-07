@@ -134,7 +134,12 @@ class Runner:
     def _run_image(self, image: str) -> Container:
         for container in self.docker_client.containers.list(ignore_removed=True):
             if image in container.image.tags:
-                container.kill()
+                try:
+                    container.kill()
+                except APIError as error:
+                    if error.status_code != 409 or "not running" not in error.explanation:
+                        # the container stopped for reasons
+                        raise error
         return self.docker_client.containers.run(image=image, ports={SERVER_PORT: SERVER_PORT}, detach=True)
 
     def _run_bench_in_container(self, *args: str) -> str:
