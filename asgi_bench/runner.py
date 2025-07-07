@@ -151,13 +151,15 @@ class Runner:
 
     def _validate_bench_endpoint(self, test_spec: TestSpec) -> bool:
         with self.console.status("  [yellow]Validating[/yellow]"):
+            _request_limit_old = test_spec.request_limit
+            test_spec.request_limit = 1
             stdout = self._run_bench_in_container(
                 f"http://127.0.0.1:{SERVER_PORT}{test_spec.path}",
                 *_args_from_spec(test_spec),
-                "--requests=1",
                 "--format=json",
                 "--print=result",
             )
+            test_spec.request_limit = _request_limit_old
         try:
             data = json.loads(stdout)
         except json.JSONDecodeError:
