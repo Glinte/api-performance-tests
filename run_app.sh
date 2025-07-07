@@ -1,3 +1,4 @@
 #!/bin/bash
 
-uvicorn --no-access-log --loop uvloop app:app --host 0.0.0.0 --port 8081 --timeout-keep-alive 15
+echo "FATAL: This script was used in the Dockerfile as the entry point, but I couldn't get it to work and have thus inlined it into teemplates/DockerfileFrameworks.jinja2" >&2
+exit 1
