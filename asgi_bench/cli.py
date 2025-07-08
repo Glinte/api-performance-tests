@@ -127,6 +127,8 @@ def results_command(
     html: bool,
     plots: bool,
 ) -> None:
+    if not markdown and not html and not plots:
+        raise click.UsageError("At least one of --markdown, --html, or --plots must be specified.")
     if plots:
         results.make_plots(
             formats=format,
