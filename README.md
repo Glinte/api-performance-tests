@@ -21,6 +21,9 @@
 
 # api-performance-tests
 
+> [!NOTE]\
+> Fork notice: I forked this abandoned repository from litestar-org/api-performance-tests and managed to get it to a runnable state. I don't plan to maintain it, I just wanted to see a benchmark for different frameworks and couldn't find any. The results are in /output, but they are not good, some benchmarks failed, latency tests are completely unusable and I don't know why, but I don't care at this point. Also, it took 9 hours on my machine to run all the tests, be warned if you decide to run it.
+
 > [!IMPORTANT]\
 > [**_Starlite has been renamed to Litestar_**](https://litestar.dev/about/organization.html#litestar-and-starlite)
 
