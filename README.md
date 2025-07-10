@@ -1,24 +1,3 @@
-<!-- markdownlint-disable -->
-<p align="center">
-  <img src="https://github.com/litestar-org/branding/blob/473f54621e55cde9acbb6fcab7fc03036173eb3d/assets/Branding%20-%20SVG%20-%20Transparent/Logo%20-%20Banner%20-%20Inline%20-%20Light.svg#gh-light-mode-only" alt="Litestar Logo - Light" width="100%" height="auto" />
-  <img src="https://github.com/litestar-org/branding/blob/473f54621e55cde9acbb6fcab7fc03036173eb3d/assets/Branding%20-%20SVG%20-%20Transparent/Logo%20-%20Banner%20-%20Inline%20-%20Dark.svg#gh-dark-mode-only" alt="Litestar Logo - Dark" width="100%" height="auto" />
-</p>
-<!-- markdownlint-restore -->
-
-<div align="center">
-
-<!-- prettier-ignore-start -->
-
-
-| Project   |     | Status                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-|-----------|:----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CI/CD     |     | [![CI](https://github.com/litestar-org/api-performance-tests/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/litestar-org/api-performance-tests/actions/workflows/ci.yml)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Community |     | [![Reddit](https://img.shields.io/reddit/subreddit-subscribers/litestarapi?label=r%2FLitestar&logo=reddit&labelColor=202235&color=edb641&logoColor=edb641)](https://reddit.com/r/litestarapi) [![Discord](https://img.shields.io/discord/919193495116337154?labelColor=202235&color=edb641&label=chat%20on%20discord&logo=discord&logoColor=edb641)](https://discord.gg/X3FJqy8d2j) [![Matrix](https://img.shields.io/badge/chat%20on%20Matrix-bridged-202235?labelColor=202235&color=edb641&logo=matrix&logoColor=edb641)](https://matrix.to/#/#litestar:matrix.org) [![Medium](https://img.shields.io/badge/Medium-202235?labelColor=202235&color=edb641&logo=medium&logoColor=edb641)](https://blog.litestar.dev) [![Twitter](https://img.shields.io/twitter/follow/LitestarAPI?labelColor=202235&color=edb641&logo=twitter&logoColor=edb641&style=flat)](https://twitter.com/LitestarAPI) [![Blog](https://img.shields.io/badge/Blog-litestar.dev-202235?logo=blogger&labelColor=202235&color=edb641&logoColor=edb641)](https://blog.litestar.dev) |
-| Meta      |     | [![Litestar Project](https://img.shields.io/badge/Litestar%20Org-%E2%AD%90%20API%20Perf%20Tests-202235.svg?logo=python&labelColor=202235&color=edb641&logoColor=edb641)](https://github.com/litestar-org/litestar) [![License - MIT](https://img.shields.io/badge/license-MIT-202235.svg?logo=python&labelColor=202235&color=edb641&logoColor=edb641)](https://spdx.org/licenses/) [![Litestar Sponsors](https://img.shields.io/badge/Sponsor-%E2%9D%A4-%23edb641.svg?&logo=github&logoColor=edb641&labelColor=202235)](https://github.com/sponsors/litestar-org) [![linting - Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/charliermarsh/ruff/main/assets/badge/v2.json&labelColor=202235)](https://github.com/astral-sh/ruff) [![code style - Black](https://img.shields.io/badge/code%20style-black-000000.svg?logo=python&labelColor=202235&logoColor=edb641)](https://github.com/psf/black)                                                                                                                        |
-
-<!-- prettier-ignore-end -->
-</div>
-
 # api-performance-tests
 
 > [!NOTE]\
@@ -37,6 +16,37 @@ This is an API performance test comparing:
 6. [BlackSheep](https://github.com/Neoteroi/BlackSheep)
 
 Using the [bombardier](https://github.com/codesenberg/bombardier) HTTP benchmarking tool.
+
+## RPS Test Results
+
+WARNING: some runs failed, ran on python 3.11, I don't understand this benchmark and may have messed up things that causes results to be inaccurate.
+
+### Plaintext
+![RPS Plaintext](output/run_3/rps_plaintext.png)
+
+### JSON
+![RPS JSON](output/run_3/rps_json.png)
+
+### Files
+![RPS Files](output/run_3/rps_files.png)
+
+### Parameters
+![RPS Parameters](output/run_3/rps_params.png)
+
+### Dynamic Response
+![RPS Dynamic Response](output/run_3/rps_dynamic-response.png)
+
+### Dependency Injection
+![RPS Dependency Injection](output/run_3/rps_dependency-injection.png)
+
+### Serialization
+![RPS Serialization](output/run_3/rps_serialization.png)
+
+### Post JSON
+![RPS Post JSON](output/run_3/rps_post-json.png)
+
+### Post Body
+![RPS Post Body](output/run_3/rps_post-body.png)
 
 ## Test Setup
 
